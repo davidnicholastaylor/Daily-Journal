@@ -1,5 +1,5 @@
 const FormManager = require("./JournalForm")
-const saveJournalEntry = require("./DataManager")
+const dataFunctions = require("./DataManager")
 
 //Rander journal entry form
 document.querySelector("#journalForm").innerHTML = FormManager.renderEntryForm()
@@ -16,12 +16,19 @@ document.querySelector("#saveEntryButton").addEventListener("click", () => {
     }
 
     // POST to API
-    saveJournalEntry(newEntry).then(() => {
+    dataFunctions.saveJournalEntry(newEntry).then(() => {
+
         // Clear the form fields
         FormManager.clearForm()
+
         // Put HTML representation on the DOM
-        let output = {x : `<h2>${newEntry.title}</h2> <p>${newEntry.content}</p> <button id="delete">Delete Post</button>`}
-        document.querySelector("#journalPost").innerHTML += output.x
-        document.querySelector("#delete").addEventListener("click", function() {output.remove(output.x)})
+        let output = `<h2>${newEntry.title}</h2> <p>${newEntry.content}</p> <button id="delete">Delete Post</button>`
+        document.querySelector("#journalPost").innerHTML += output
+
+        // Add delete listener/function to button
+        document.querySelector("#delete").addEventListener("click", dataFunctions.deleteJournalEntry(output).then((response) => {
+            return response
+        })
+        )
     })
 })
