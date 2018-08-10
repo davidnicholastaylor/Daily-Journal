@@ -1,7 +1,7 @@
 :root {
     --label-font-size: 2em;
     --label-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    --form-entry-size: 4em;
+    --form-entry-size: 2em;
     --form-entry-margin: .5em;
 }
 
@@ -23,4 +23,9 @@ label[for=entryContent] {
 #entryContent {
     font-size: var(--form-entry-size);
     margin: var(--form-entry-margin)
+}
+
+#saveEntryButton {
+    background-color: green;
+    color: antiquewhite
 }

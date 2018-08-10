@@ -23,7 +23,7 @@ document.querySelector("#saveEntryButton").addEventListener("click", () => {
         FormManager.clearForm()
 
         // Put HTML representation on the DOM
-        let output = `<h2>${newEntry.title}</h2> <p>${newEntry.content}</p> <button id="delete">Delete Post</button>`
+        let output = `<div id="output"><h2>${newEntry.title}</h2> <p>${newEntry.content}</p> <button id="delete">Delete Post</button></div>`
         document.querySelector("#journalPost").innerHTML += output
 
         // Add delete listener/function to button

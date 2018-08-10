@@ -1,3 +1,14 @@
-h2 {
-    
+:root {
+    --output-border: 1px solid black;
+    --output-padding: 1.5em;
+}
+
+#output {
+    border: var(--output-border);
+    padding: var(--output-padding);
+}
+
+#delete{
+    background-color: red;
+    color: antiquewhite;
 }
