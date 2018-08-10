@@ -1,5 +1,6 @@
 const FormManager = require("./JournalForm")
 const dataFunctions = require("./DataManager")
+const $ = require("jquery")
 
 //Rander journal entry form
 document.querySelector("#journalForm").innerHTML = FormManager.renderEntryForm()

@@ -1,0 +1,11 @@
+@import 'form.css';
+@import 'entry.css';
+
+body {
+    font-family: sans-serif;
+    margin: 1em;
+}
+
+button {
+    margin: 1em;
+}

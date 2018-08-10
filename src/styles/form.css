@@ -1,0 +1,26 @@
+:root {
+    --label-font-size: 2em;
+    --label-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --form-entry-size: 4em;
+    --form-entry-margin: .5em;
+}
+
+label[for=entryTitle] {
+    font-family: var(--label-font-family);
+    font-size: var(--label-font-size);
+}
+
+label[for=entryContent] {
+    font-family: var(--label-font-family);
+    font-size: var(--label-font-size);
+}
+
+#entryTitle {
+    font-size: var(--form-entry-size);
+    margin: var(--form-entry-margin)
+}
+
+#entryContent {
+    font-size: var(--form-entry-size);
+    margin: var(--form-entry-margin)
+}
